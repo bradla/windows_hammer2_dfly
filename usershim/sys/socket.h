@@ -1,0 +1,1 @@
+/* stub <sys/socket.h> */

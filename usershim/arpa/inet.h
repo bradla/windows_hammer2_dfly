@@ -1,0 +1,1 @@
+/* stub <arpa/inet.h> */

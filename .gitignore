@@ -1,0 +1,54 @@
+# Whitelist .gitignore for the HAMMER2 Windows port.
+#
+# Policy: track ONLY source files (*.c / *.h) and the build configuration
+# (CMakeLists.txt, Makefile).  Everything else -- build output, test images,
+# binaries, man pages, stray files -- is ignored.
+#
+# How it works: rule 1 ignores everything; rule 2 lets git descend into
+# subdirectories; the "!" rules re-include the file types we want; the final
+# section re-ignores generated build directories.  Later patterns win.
+
+# 1. Ignore everything by default.
+*
+
+# 2. ...but allow git to descend into subdirectories to find the files below.
+!*/
+
+# 3. Source files.
+!*.c
+!*.h
+
+# 4. Build system / configuration.
+!CMakeLists.txt
+!Makefile
+!*.cmake.in
+!*.mk
+
+# 5. Project documentation / metadata.
+!README.md
+!*.md
+!LICENSE
+!.gitignore
+
+# 6. Generated build output -- never track (overrides the includes above for
+#    anything inside these directories).
+build/
+build_cmake/
+out/
+cmake-build-*/
+
+# 7. Belt-and-suspenders: common build artifacts and large/test files, in case
+#    a build is ever run in-tree rather than under build/.
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+*.res
+*.manifest
+*.img
+*.iso
