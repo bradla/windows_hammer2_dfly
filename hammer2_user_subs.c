@@ -7,10 +7,6 @@
  * The CRC32C / dirhash / size-string logic mirrors lh1/src/sbin/hammer2/subs.c.
  */
 
-<<<<<<< HEAD
-#define HAMMER2_USERLAND
-#include "hammer2_user_windows.h"
-=======
 #ifndef HAMMER2_USERLAND
 #define HAMMER2_USERLAND		/* normally set by the build; harmless here */
 #endif
@@ -23,7 +19,6 @@
  * there is only one calling convention, so it linked there regardless).
  */
 HRESULT __stdcall CoCreateGuid(GUID *pguid);
->>>>>>> 21de6d5 (file cleanup)
 #include <vfs/hammer2/hammer2_disk.h>
 #include <vfs/hammer2/hammer2_xxhash.h>
 #include <uuid/uuid.h>

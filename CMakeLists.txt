@@ -162,14 +162,3 @@ if(MSVC)
     target_compile_options(hammer2_cli PRIVATE /std:clatest /Zc:preprocessor /W3)
     target_link_libraries(hammer2_cli PRIVATE ole32)
 endif()
-<<<<<<< HEAD
-
-# Existing minimal probe binary (kept for smoke-testing the shim layer).
-add_library(hammer2_core_windows STATIC hammer2_core_windows.c)
-target_include_directories(hammer2_core_windows PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-
-add_executable(hammer2_port_stub hammer2_port_stub.c)
-target_include_directories(hammer2_port_stub PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(hammer2_port_stub PRIVATE hammer2_core_windows)
-=======
->>>>>>> 21de6d5 (file cleanup)

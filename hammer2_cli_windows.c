@@ -10,13 +10,9 @@
  * built here.  For an offline blockref dump use `fsck_hammer2 -v`.
  */
 
-<<<<<<< HEAD
-#define HAMMER2_USERLAND
-=======
 #ifndef HAMMER2_USERLAND
 #define HAMMER2_USERLAND		/* normally set by the build; harmless here */
 #endif
->>>>>>> 21de6d5 (file cleanup)
 #include "hammer2_user_windows.h"
 #include <vfs/hammer2/hammer2_disk.h>
 #include "hammer2_subs.h"
